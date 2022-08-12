@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+namespace Objects_and_testing_Transactions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { 
+           
+            Random random = new Random();
+            double minCredAmount = 0.25;
+            var symbolsList1 = new List<string> { "Watermellon", "Pineapple", "7", "3Bar", "2Bar", "Bar", "Cherry", "Bonus", "empty" };
+            var symbolsList2 = new List<string> { "Watermellon", "Pineapple", "7", "3Bar", "2Bar", "Bar", "Cherry", "Bonus", "empty" };
+            var symbolsList3 = new List<string> { "Watermellon", "Pineapple", "7", "3Bar", "2Bar", "Bar", "Cherry", "Bonus", "empty" };
+
+            Console.WriteLine("Insert a credit");
+
+            double credit = double.Parse(Console.ReadLine());
+            if (credit == 0.25) 
+            {
+                int ran1 = random.Next(1, 10);
+                int ran2 = random.Next(1, 10);
+                int ran3 = random.Next(1, 10);
+
+                string reelResult1 = symbolsList1[ran1];
+                string reelResult2 = symbolsList2[ran2];
+                string reelResult3 = symbolsList3[ran3];
+
+                Console.WriteLine(" " + reelResult1 + " " + " " + reelResult2 + " " + reelResult3);    
+                    }
+            else
+            {
+                Console.WriteLine("Insert" + " " + minCredAmount);
+            }
+        }
+    }
+}
